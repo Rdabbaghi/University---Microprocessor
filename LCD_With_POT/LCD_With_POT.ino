@@ -3,7 +3,7 @@ const int rs=12,en=11,d4=5,d5=4,d6=3,d7=2;
 LiquidCrystal lcd (rs , en , d4 , d5 , d6 , d7 );
 void setup ()
 {
-  pinMode(A3,INPUT);                       // Introducing the input pin
+  pinMode(A3,INPUT);                       // Introducing the input pin 
   serial.begin(9600);                      // Introducing the series
   lcd.begin(16,2);                         // Introducing LCD resolution
   lcd.print(" (: Hellow Friend :) ");      // Show the desired message
