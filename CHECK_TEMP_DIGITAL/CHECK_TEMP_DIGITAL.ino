@@ -1,5 +1,5 @@
-#include <LiquidCrystal.h>
-#include <DHT.h>
+#include <LiquidCrystal.h>                                                        // Library required for this project
+#include <DHT.h>                                                                 // Library required for this project
 #include <Adafruit_sensor.h>                                                    // Library required for this project
 DHT dht                                                                        // Required for this project
 #define DHTPIN 6                                                              // Library required for this project
