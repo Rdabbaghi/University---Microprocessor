@@ -1,7 +1,7 @@
 <p>
 The way this board works is that when the signal it sends hits somewhere and that signal returns, it shows the distance.
         
-Like the example below:
+Like the example below :
 
         
 </p>
