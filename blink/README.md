@@ -3,7 +3,7 @@
     </a>
 </p>
 <p align="center"> 
-This example shows the simplest thing you can do with an Arduino to see physical output: it blinks the on-board LED.
+This example shows the simplest thing you can do with an Arduino to see physical output: it blinks the on-board & external LED.
         
  //----------------------------
  
