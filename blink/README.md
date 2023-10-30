@@ -5,7 +5,7 @@
 <p>
 This example shows the simplest thing you can do with an Arduino to see physical output: it blinks the on-board & external LED.
         
- //----------------------------
+ ----------------------------------------
  
  Hardware Required
  
@@ -17,7 +17,7 @@ This example shows the simplest thing you can do with an Arduino to see physical
  
  220 ohm resistor
  
- //---------------------------
+ ----------------------------------------
  
  Circuit
  
