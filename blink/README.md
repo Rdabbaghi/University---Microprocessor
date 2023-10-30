@@ -2,7 +2,7 @@
         <img src="https://linuxhint.com/wp-content/uploads/2022/01/function-in-Arduino-5.gif">
     </a>
 </p>
-<p "
+<p>"
 This example shows the simplest thing you can do with an Arduino to see physical output: it blinks the on-board & external LED.
         
  //----------------------------
