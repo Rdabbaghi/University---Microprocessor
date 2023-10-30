@@ -2,7 +2,7 @@
         <img src="https://linuxhint.com/wp-content/uploads/2022/01/function-in-Arduino-5.gif">
     </a>
 </p>
-<p>"
+<p>
 This example shows the simplest thing you can do with an Arduino to see physical output: it blinks the on-board & external LED.
         
  //----------------------------
@@ -21,5 +21,5 @@ This example shows the simplest thing you can do with an Arduino to see physical
  
  Circuit
  
- This example uses the built-in LED that most Arduino boards have. This LED is connected to a digital pin and its number may vary from board type to board type."
+ This example uses the built-in LED that most Arduino boards have. This LED is connected to a digital pin and its number may vary from board type to board type.
 </p>
