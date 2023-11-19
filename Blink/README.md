@@ -1,4 +1,7 @@
-#Blink Project :
+
+
+#Blink:
+
 <p align="center">
         <img src="https://linuxhint.com/wp-content/uploads/2022/01/function-in-Arduino-5.gif">
     </a>
