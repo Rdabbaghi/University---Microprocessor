@@ -1,7 +1,7 @@
 #include <Keypad.h>
 const byte ROWS = 4; // four rows
 const byte COLS = 4; // four columns
-// define the cymbols on the buttons of the keypads
+// define the cymbols on the buttons of the keypads 
 float firstnumber = 0;
 float secondnumber = 0;
 float resulet = 0;
