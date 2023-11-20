@@ -1,44 +1,24 @@
-/* SevSeg Counter Example
- 
- Copyright 2020 Dean Reading
- 
- This example demonstrates a very simple use of the SevSeg library with a 4
- digit display. It displays a counter that counts up, showing deci-seconds.
- */
-
 #include "SevSeg.h"
 SevSeg sevseg; //Instantiate a seven segment controller object
+const int buttonPin=10;
 
 void setup() {
-  byte numDigits = 4;
+  byte numDigits = 1;
   byte digitPins[] = {};
   byte segmentPins[] = {3,2,8,7,6,4,5,9};
-  bool resistorsOnSegments = True; // 'false' means resistors are on digit pins
-  byte hardwareConfig = COMMON_ANODE; // See README.md for options
-  bool updateWithDelays = false; // Default 'false' is Recommended
-  bool leadingZeros = false; // Use 'true' if you'd like to keep the leading zeros
-  bool disableDecPoint = false; // Use 'true' if your decimal point doesn't exist or isn't connected
-  
-  sevseg.begin(hardwareConfig, numDigits, digitPins, segmentPins, resistorsOnSegments,
-  updateWithDelays, leadingZeros, disableDecPoint);
+  bool resistorsOnSegments = True; // 'false' means resistors are on digit pins 
+  sevseg.begin(COMMON_ANODE, numDigits, digitPins, segmentPins, resistorsOnSegments);
   sevseg.setBrightness(90);
+  pinMode(buttonPin,INPUT)
+
 }
 
-void loop() {
-  static unsigned long timer = millis();
-  static int deciSeconds = 0;
-  
-  if (millis() - timer >= 100) {
-    timer += 100;
-    deciSeconds++; // 100 milliSeconds is equal to 1 deciSecond
-    
-    if (deciSeconds == 10000) { // Reset to 0 after counting for 1000 seconds.
-      deciSeconds=0;
-    }
-    sevseg.setNumber(deciSeconds, 1);
+void loop() 
+{
+  buttonState=digitalRead(buttonPin);
+
+  if (ButtonState == HIGH)
+  {
+    sevseg.setNumber(random(1,7));
+    sevseg.refreshDisplay();
   }
-
-  sevseg.refreshDisplay(); // Must run repeatedly
-}
-
-/// END ///
