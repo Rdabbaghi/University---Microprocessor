@@ -13,3 +13,4 @@ void loop() {
   delay(1000);
 }
 //کد مستر جهت ارتباط سریال 
+// Master code for serial communication
