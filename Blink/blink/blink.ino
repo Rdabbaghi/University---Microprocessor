@@ -1,5 +1,5 @@
 int ledpin=13;
-int timer = 500;
+int timer = 10000;
 // In this section, we make the initial settings
 void setup() 
 {
