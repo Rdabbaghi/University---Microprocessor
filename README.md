@@ -38,12 +38,12 @@ To get started with the project, clone the repository and follow the installatio
 
 ## Project Structure
 ```
-â”œâ”€â”€ src/                  # Source code for the microprocessor simulation
-â”œâ”€â”€ docs/                 # Documentation files
-â”œâ”€â”€ examples/             # Sample assembly programs
-â”œâ”€â”€ tests/                # Unit tests for the project
-â”œâ”€â”€ README.md             # This file
-â””â”€â”€ LICENSE               # License information
+src/                  # Source code for the microprocessor simulation
+docs/                 # Documentation files
+examples/             # Sample assembly programs
+tests/                # Unit tests for the project
+README.md             # This file
+LICENSE               # License information
 ```
 
 ## Installation
