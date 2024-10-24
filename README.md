@@ -5,7 +5,7 @@
 </p>
 
 
-# University Microprocessor Project
+## University Microprocessor Project
 
 This repository contains the source code and documentation for a university-level microprocessor project. The goal of the project is to simulate and implement basic microprocessor functionalities using assembly language. The project demonstrates core concepts such as data handling, memory management, instruction execution, and input/output processing.
 
