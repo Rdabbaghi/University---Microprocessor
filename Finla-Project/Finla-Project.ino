@@ -1,12 +1,14 @@
 #include <SoftwareSerial.h>
-SoftwareSerial HM10(0, 1);  // RX = 2, TX = 3
+SoftwareSerial HM10(0, 1);  // RX = 0, TX = 1
 char appData;
 String inData = "";
 int timer = 2000;
-const int DO = 6;
-const int buzzer = 5;  //buzzer to arduino pin 9
+int RelayPin = 12;
+const int DO = 2;
+const int buzzer = 5;  //buzzer to arduino pin 5
 
 void setup() {
+  pinMode(RelayPin, OUTPUT);     // Set RelayPin as an output pin
   Serial.begin(9600);
   Serial.println("HM10 serial started at 9600");
   HM10.begin(9600);         // set HM10 serial at 9600 baud rate
@@ -20,6 +22,8 @@ void loop() {
   float sensor_volt;
   float RS_gas;
   float ratio;
+  
+  
   //-Replace the name "R0" with the value of R0 in the demo of First Test -/
   float R0 = 0.91;
   int sensorValue = analogRead(A0);
@@ -35,15 +39,19 @@ void loop() {
   Serial.println(ratio);
   Serial.print("\n\n");
   alarm = digitalRead(DO);
-  delay(timer)
+  delay(timer);
 
-  if (alarm == 1) {
+  if (alarm == 1 ) {
 
     digitalWrite(13, LOW);
+    // Let's turn off the relay...
+    digitalWrite(RelayPin, HIGH);
+    delay(3000);
   } else if (alarm == 0) {
     digitalWrite(13, HIGH);
-
-
+    // Let's turn on the relay...
+    digitalWrite(RelayPin, LOW);
+    delay(3000);
     tone(buzzer, timer);  // Send 1KHz sound signal...
     delay(timer);         // ...for 1 sec
     noTone(buzzer);      // Stop sound...
