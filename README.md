@@ -78,13 +78,338 @@ To get started, follow these steps to set up the hardware and run the software:
 ## Project Structure
 
 ```
-â”œâ”€â”€ src/                        # Source code for Arduino sketches
-â”œâ”€â”€ docs/                       # Documentation files
-â”œâ”€â”€ images/                     # Images and diagrams for documentation
-â”œâ”€â”€ examples/                   # Example Arduino projects and sketches
-â”œâ”€â”€ tests/                      # Unit tests for the project
-â”œâ”€â”€ README.md                   # This file
-â””â”€â”€ LICENSE                     # License information
+├── .github
+    └── workflows
+    │   └── c-cpp.yml
+├── Blink
+    ├── Board connection method (schematic_map).png
+    ├── README.md
+    ├── Schematic_board_map.png
+    └── blink
+    │   └── blink.ino
+├── CHECK_TEMP_ANALOG
+    ├── CHECK_TEMP_ANALOG.ino
+    └── Library
+    │   └── LiquidCrystal
+    │       ├── README.adoc
+    │       ├── examples
+    │           ├── Autoscroll
+    │           │   └── Autoscroll.ino
+    │           ├── Blink
+    │           │   └── Blink.ino
+    │           ├── Cursor
+    │           │   └── Cursor.ino
+    │           ├── CustomCharacter
+    │           │   └── CustomCharacter.ino
+    │           ├── Display
+    │           │   └── Display.ino
+    │           ├── HelloWorld
+    │           │   └── HelloWorld.ino
+    │           ├── Scroll
+    │           │   └── Scroll.ino
+    │           ├── SerialDisplay
+    │           │   └── SerialDisplay.ino
+    │           ├── TextDirection
+    │           │   └── TextDirection.ino
+    │           └── setCursor
+    │           │   └── setCursor.ino
+    │       ├── keywords.txt
+    │       ├── library.properties
+    │       └── src
+    │           ├── LiquidCrystal.cpp
+    │           └── LiquidCrystal.h
+├── CHECK_TEMP_DIGITAL
+    ├── Arduino DHT11 Sensor and Show on LCD ( Schematic ).jpg
+    ├── Arduino DHT11 Sensor and Show on LCD .jpg
+    ├── CHECK_TEMP_DIGITAL.ino
+    └── Librarry
+    │   ├── Adafruit_Unified_Sensor
+    │       ├── Adafruit_Sensor.cpp
+    │       ├── Adafruit_Sensor.h
+    │       ├── LICENSE.txt
+    │       ├── README.md
+    │       ├── examples
+    │       │   └── sensortest
+    │       │   │   └── sensortest.ino
+    │       └── library.properties
+    │   ├── DFRobot_DHT11
+    │       ├── DFRobot_DHT11.cpp
+    │       ├── DFRobot_DHT11.h
+    │       ├── LICENSE
+    │       ├── README.md
+    │       ├── README_CN.md
+    │       ├── examples
+    │       │   └── readDHT11
+    │       │   │   └── readDHT11.ino
+    │       ├── keywords.txt
+    │       ├── library.properties
+    │       └── resources
+    │       │   └── images
+    │       │       └── DFR0067.png
+    │   ├── DHT11
+    │       ├── CODE_OF_CONDUCT.md
+    │       ├── CONTRIBUTING.md
+    │       ├── LICENSE
+    │       ├── README.md
+    │       ├── assets
+    │       │   └── communication.png
+    │       ├── examples
+    │       │   ├── ReadHumidity
+    │       │   │   └── ReadHumidity.ino
+    │       │   ├── ReadPlot
+    │       │   │   └── ReadPlot.ino
+    │       │   ├── ReadTempAndHumidity
+    │       │   │   └── ReadTempAndHumidity.ino
+    │       │   └── ReadTemperature
+    │       │   │   └── ReadTemperature.ino
+    │       ├── library.properties
+    │       └── src
+    │       │   ├── DHT11.cpp
+    │       │   └── DHT11.h
+    │   ├── DHT_sensor_library
+    │       ├── CONTRIBUTING.md
+    │       ├── DHT.cpp
+    │       ├── DHT.h
+    │       ├── DHT_U.cpp
+    │       ├── DHT_U.h
+    │       ├── README.md
+    │       ├── code-of-conduct.md
+    │       ├── examples
+    │       │   ├── DHT_Unified_Sensor
+    │       │   │   └── DHT_Unified_Sensor.ino
+    │       │   └── DHTtester
+    │       │   │   └── DHTtester.ino
+    │       ├── keywords.txt
+    │       ├── library.properties
+    │       └── license.txt
+    │   └── LiquidCrystal
+    │       ├── README.adoc
+    │       ├── examples
+    │           ├── Autoscroll
+    │           │   └── Autoscroll.ino
+    │           ├── Blink
+    │           │   └── Blink.ino
+    │           ├── Cursor
+    │           │   └── Cursor.ino
+    │           ├── CustomCharacter
+    │           │   └── CustomCharacter.ino
+    │           ├── Display
+    │           │   └── Display.ino
+    │           ├── HelloWorld
+    │           │   └── HelloWorld.ino
+    │           ├── Scroll
+    │           │   └── Scroll.ino
+    │           ├── SerialDisplay
+    │           │   └── SerialDisplay.ino
+    │           ├── TextDirection
+    │           │   └── TextDirection.ino
+    │           └── setCursor
+    │           │   └── setCursor.ino
+    │       ├── keywords.txt
+    │       ├── library.properties
+    │       └── src
+    │           ├── LiquidCrystal.cpp
+    │           └── LiquidCrystal.h
+├── Calculator
+    ├── Calculator.ino
+    └── index.zip
+├── Final-Project
+    ├── Board & module Picture
+    │   ├── 280x280.jpg
+    │   ├── Fan-5V-0.16A-3x3-1.webp
+    │   ├── Uno-R3-CH340G-ATmega328p-Development-Board-Compatible-with-Arduino2.webp
+    │   ├── VH9UQ.png
+    │   ├── buzzer-بازر-یکپارچه-12-ولت.jpg
+    │   ├── mq9-gas-sensor-arduino-fritzing.jpg
+    │   ├── mq9-gas-sensor-module-lpg-co.webp
+    │   ├── tutorial-for-controlling-ac-devices-with-relay-module-and-arduino-min.webp
+    │   └── wiring-relay-module-with-arduino.webp
+    ├── Document
+    │   ├── Project_Documentation_EN.docx.docx
+    │   └── Project_Documentation_FA.docx.docx
+    ├── Final-Project.ino
+    ├── IoT_Uni.pptx
+    ├── Picture_for_project
+    │   ├── Fan-5V-0.16A-3x3-1.webp
+    │   └── relay_5V.webp
+    └── Readme.md
+├── Get a number and print it twice on the output
+    └── Get a number and print it twice on the output.ino
+├── Get character and show on the serial monitor
+    └── Get character and show on the serial monitor.ino
+├── Get name( firstname & lastname ) and show on the serial monitor
+    └── Get name( firstname & lastname ) and show on the serial monitor.ino
+├── Infrared
+    └── Infrared.ino
+├── Keypad-LEDonORoff
+    ├── Keypad-LEDonORoff.ino
+    ├── LED is off.jpg
+    └── LED is on.jpg
+├── Keypad-tutorial
+    ├── CustomKeypad
+    │   └── CustomKeypad.ino
+    ├── How can Keypad connent to Arduino(Schematic).jpg
+    ├── How can Keypad connent to Arduino.jpg
+    └── index.zip
+├── Keypad-validkey
+    ├── LED is off .jpg
+    ├── LED is on .jpg
+    ├── index.zip
+    └── keypad-with-validkey.ino
+├── LCD
+    ├── LCD.ino
+    └── Library
+    │   └── LiquidCrystal
+    │       ├── README.adoc
+    │       ├── examples
+    │           ├── Autoscroll
+    │           │   └── Autoscroll.ino
+    │           ├── Blink
+    │           │   └── Blink.ino
+    │           ├── Cursor
+    │           │   └── Cursor.ino
+    │           ├── CustomCharacter
+    │           │   └── CustomCharacter.ino
+    │           ├── Display
+    │           │   └── Display.ino
+    │           ├── HelloWorld
+    │           │   └── HelloWorld.ino
+    │           ├── Scroll
+    │           │   └── Scroll.ino
+    │           ├── SerialDisplay
+    │           │   └── SerialDisplay.ino
+    │           ├── TextDirection
+    │           │   └── TextDirection.ino
+    │           └── setCursor
+    │           │   └── setCursor.ino
+    │       ├── keywords.txt
+    │       ├── library.properties
+    │       └── src
+    │           ├── LiquidCrystal.cpp
+    │           └── LiquidCrystal.h
+├── LCD_With_POT
+    ├── LCD_With_POT.ino
+    ├── Library.rar
+    ├── Library
+    │   └── LiquidCrystal
+    │   │   ├── README.adoc
+    │   │   ├── examples
+    │   │       ├── Autoscroll
+    │   │       │   └── Autoscroll.ino
+    │   │       ├── Blink
+    │   │       │   └── Blink.ino
+    │   │       ├── Cursor
+    │   │       │   └── Cursor.ino
+    │   │       ├── CustomCharacter
+    │   │       │   └── CustomCharacter.ino
+    │   │       ├── Display
+    │   │       │   └── Display.ino
+    │   │       ├── HelloWorld
+    │   │       │   └── HelloWorld.ino
+    │   │       ├── Scroll
+    │   │       │   └── Scroll.ino
+    │   │       ├── SerialDisplay
+    │   │       │   └── SerialDisplay.ino
+    │   │       ├── TextDirection
+    │   │       │   └── TextDirection.ino
+    │   │       └── setCursor
+    │   │       │   └── setCursor.ino
+    │   │   ├── keywords.txt
+    │   │   ├── library.properties
+    │   │   └── src
+    │   │       ├── LiquidCrystal.cpp
+    │   │       └── LiquidCrystal.h
+    └── Untitled.jpg
+├── LED_DancingLight
+    ├── LED_DancingLight.ino
+    ├── README.md
+    └── gif.gif
+├── MQ-9_Module
+    └── MQ-9_Module.ino
+├── Master-Code
+    └── Master-Code.ino
+├── README.md
+├── SevSeg_Counter
+    ├── Arduino-7-Segment-Display-Circuit-Diagram-1024x550.png
+    └── SevSeg_Counter.ino
+├── SevSeg_Counter_with_microswitch
+    ├── Arduino-7-Segment-Display-with-Push-Button-Circuit-Diagram.png
+    ├── README.md
+    ├── SevSeg_Counter_with_microswitch.ino
+    └── ezgif.com-video-to-gif.gif
+├── Show of HC-SR04 by LCD & potentiometer & LED
+    ├── Arduino-ultrasonic-sensor-and-the-LDC-circuit-diagram.webp
+    ├── Library
+    │   └── LiquidCrystal
+    │   │   ├── README.adoc
+    │   │   ├── examples
+    │   │       ├── Autoscroll
+    │   │       │   └── Autoscroll.ino
+    │   │       ├── Blink
+    │   │       │   └── Blink.ino
+    │   │       ├── Cursor
+    │   │       │   └── Cursor.ino
+    │   │       ├── CustomCharacter
+    │   │       │   └── CustomCharacter.ino
+    │   │       ├── Display
+    │   │       │   └── Display.ino
+    │   │       ├── HelloWorld
+    │   │       │   └── HelloWorld.ino
+    │   │       ├── Scroll
+    │   │       │   └── Scroll.ino
+    │   │       ├── SerialDisplay
+    │   │       │   └── SerialDisplay.ino
+    │   │       ├── TextDirection
+    │   │       │   └── TextDirection.ino
+    │   │       └── setCursor
+    │   │       │   └── setCursor.ino
+    │   │   ├── keywords.txt
+    │   │   ├── library.properties
+    │   │   └── src
+    │   │       ├── LiquidCrystal.cpp
+    │   │       └── LiquidCrystal.h
+    ├── README.md
+    └── Show.ino
+├── Show of HC-SR04 by LCD & potentiometer
+    ├── Library
+    │   └── LiquidCrystal
+    │   │   ├── README.adoc
+    │   │   ├── examples
+    │   │       ├── Autoscroll
+    │   │       │   └── Autoscroll.ino
+    │   │       ├── Blink
+    │   │       │   └── Blink.ino
+    │   │       ├── Cursor
+    │   │       │   └── Cursor.ino
+    │   │       ├── CustomCharacter
+    │   │       │   └── CustomCharacter.ino
+    │   │       ├── Display
+    │   │       │   └── Display.ino
+    │   │       ├── HelloWorld
+    │   │       │   └── HelloWorld.ino
+    │   │       ├── Scroll
+    │   │       │   └── Scroll.ino
+    │   │       ├── SerialDisplay
+    │   │       │   └── SerialDisplay.ino
+    │   │       ├── TextDirection
+    │   │       │   └── TextDirection.ino
+    │   │       └── setCursor
+    │   │       │   └── setCursor.ino
+    │   │   ├── keywords.txt
+    │   │   ├── library.properties
+    │   │   └── src
+    │   │       ├── LiquidCrystal.cpp
+    │   │       └── LiquidCrystal.h
+    ├── README.md
+    ├── Show of HC-SR04 by LCD & potentiometer ( image ).jpg
+    ├── Show of HC-SR04 by LCD & potentiometer( Schema ).jpg
+    └── Ultrasonic.ino
+├── Show-time-on-LCD
+    ├── How to connect LCD & potentiometer in Arduino.jpg
+    ├── Library.rar
+    └── Show-time-on-LCD.ino
+└── Slave-Code
+    └── Slave-Code.ino
 ```
 
 ## Installation
